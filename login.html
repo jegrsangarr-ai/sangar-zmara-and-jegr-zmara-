@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ckb" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>چوونەژوورەوە | سەنگەر زمارەیی و جێگر زمارەیی</title>
+    <meta name="description" content="سیستەمی تەواوی کاشێر، فرۆشتن، کۆگا، قەرز، کڕین و بەڕێوەبردنی دوکانی سەنگەر زمارەیی و جێگر زمارەیی لە هەولێر" />
+    <meta property="og:title" content="چوونەژوورەوە | سەنگەر زمارەیی و جێگر زمارەیی" />
+    <meta property="og:description" content="سیستەمی تەواوی کاشێر، فرۆشتن، کۆگا، قەرز، کڕین و بەڕێوەبردنی دوکانی سەنگەر زمارەیی و جێگر زمارەیی لە هەولێر" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at 50% 0%, #1e293b 0%, #0f172a 100%);
+        font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        padding: 20px;
+        color: #f8fafc;
+      }
+      .login-container {
+        width: 100%;
+        max-width: 440px;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 14px;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        color: #0f172a;
+        overflow: hidden;
+      }
+      .login-header {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        padding: 32px 24px 28px;
+        text-align: center;
+        color: #ffffff;
+        border-bottom: 3px solid #2563eb;
+      }
+      .login-logo {
+        width: 58px;
+        height: 58px;
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        border-radius: 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+        margin-bottom: 14px;
+      }
+      .login-title {
+        font-size: 20px;
+        font-weight: 800;
+        margin: 0 0 6px;
+        letter-spacing: -0.02em;
+      }
+      .login-subtitle {
+        font-size: 13px;
+        color: #94a3b8;
+        margin: 0;
+      }
+      .login-body {
+        padding: 28px 24px;
+      }
+      .btn-submit {
+        width: 100%;
+        padding: 13px;
+        font-size: 16px;
+        font-weight: 700;
+        background: #2563eb;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.15s ease;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+        margin-top: 8px;
+      }
+      .btn-submit:hover {
+        background: #1d4ed8;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+      }
+      .login-footer {
+        padding: 16px 24px;
+        background: #f8fafc;
+        border-top: 1px solid #e2e8f0;
+        text-align: center;
+        font-size: 12px;
+        color: #64748b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-header">
+        <div class="login-logo">🚛</div>
+        <h1 class="login-title">سەنگەر زمارەیی و جێگر زمارەیی</h1>
+        <p class="login-subtitle">سیستەمی فرۆشتن، کۆگا و بەڕێوەبردنی پارچەی بارهەڵگر</p>
+      </div>
+
+      <div class="login-body">
+        <form id="login-form">
+          <div class="form-group" style="margin-bottom: 18px;">
+            <label class="form-label" for="email" style="font-weight: 700; color: #1e293b; margin-bottom: 6px; display: block;">ئیمەیڵ یان ناوی بەکارهێنەر</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Username or Email (admin / cashier)"
+              required
+              autocomplete="username"
+              autofocus
+              style="direction: ltr; text-align: left; font-size: 15px; padding: 11px 14px;"
+            />
+          </div>
+
+          <div class="form-group" style="margin-bottom: 20px;">
+            <label class="form-label" for="password" style="font-weight: 700; color: #1e293b; margin-bottom: 6px; display: block;">وشەی نهێنی</label>
+            <div style="position: relative; display: flex; align-items: center;">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-control"
+                placeholder="Password"
+                required
+                autocomplete="current-password"
+                style="direction: ltr; text-align: left; font-size: 15px; padding: 11px 44px 11px 14px; width: 100%;"
+              />
+              <button
+                type="button"
+                id="btn-toggle-password"
+                aria-label="Toggle password visibility"
+                style="position: absolute; left: 8px; background: transparent; border: none; cursor: pointer; color: #64748b; font-size: 18px; padding: 6px; display: flex; align-items: center; justify-content: center; border-radius: 6px;"
+                title="پیشاندان / شاردنەوەی وشەی نهێنی"
+              >
+                👁️
+              </button>
+            </div>
+          </div>
+
+          <div id="login-error" style="display: none; padding: 10px 14px; background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; color: #dc2626; font-size: 13px; font-weight: 600; margin-bottom: 16px;"></div>
+
+          <button type="submit" class="btn-submit" id="btn-submit-text">
+            چوونە ژوورەوە
+          </button>
+        </form>
+      </div>
+
+      <div class="login-footer">
+        <div>📍 هەولێر - ناوچەی پیشەسازی باکوور</div>
+        <div style="margin-top: 4px; direction: ltr; font-weight: 600;">جێگر: 07503149696 | سەنگەر: 07504687412</div>
+      </div>
+    </div>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script type="module">
+      import { api, showToast } from '/js/api.js';
+
+      const loginForm = document.getElementById('login-form');
+      const emailInput = document.getElementById('email');
+      const passwordInput = document.getElementById('password');
+      const togglePasswordBtn = document.getElementById('btn-toggle-password');
+      const errorBox = document.getElementById('login-error');
+      const submitBtn = document.getElementById('btn-submit-text');
+
+      // Password visibility toggle
+      togglePasswordBtn?.addEventListener('click', () => {
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          togglePasswordBtn.textContent = '🙈';
+          togglePasswordBtn.title = 'شاردنەوەی وشەی نهێنی';
+        } else {
+          passwordInput.type = 'password';
+          togglePasswordBtn.textContent = '👁️';
+          togglePasswordBtn.title = 'پیشاندانی وشەی نهێنی';
+        }
+      });
+
+      loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        errorBox.style.display = 'none';
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'خەریکی چوونەژوورەوەیە...';
+
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        if (!email || !password) {
+          errorBox.textContent = 'تکایە سەرجەم خانەکان پڕبکەرەوە';
+          errorBox.style.display = 'block';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'چوونە ژوورەوە';
+          return;
+        }
+
+        try {
+          const res = await api.post('/auth/login', { email, password });
+          const token = res.data?.token || res.token;
+          const user = res.data?.user || res.user;
+
+          if (res.success && token && user) {
+            localStorage.setItem('szjz_token', token);
+            localStorage.setItem('szjz_user', JSON.stringify(user));
+            showToast(res.message || 'بە سەرکەوتوویی چوویتە ژوورەوە', 'success');
+            setTimeout(() => {
+              window.location.href = '/';
+            }, 300);
+          } else {
+            errorBox.textContent = res.message || 'ئیمەیڵ یان وشەی نهێنی هەڵەیە';
+            errorBox.style.display = 'block';
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'چوونە ژوورەوە';
+          }
+        } catch (err) {
+          errorBox.textContent = 'هەڵە لە پەیوەندیکردن بە سێرڤەر';
+          errorBox.style.display = 'block';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'چوونە ژوورەوە';
+        }
+      });
+    </script>
+  </body>
+</html>

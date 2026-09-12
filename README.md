@@ -1,11 +1,53 @@
-<div align="center">
+# سیستەمی کۆگا و فرۆشتن: سەنگەر زمارەیی و جێگر زمارەیی
+# Sangar & Jegr Zmarayi - Truck Parts POS & Inventory System (Offline Standalone)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+سیستەمی تەواوی بەڕێوەبردنی کۆگا، فرۆشتنی پارچەی یەدەگی بارهەڵگر (ئەکتڕۆس، سکانیا، مان، ڤۆڵڤۆ و هتد)، پسووڵە، کڕیاران و قەرز، کڕین لە دابینکەران، گەڕاندنەوەی کاڵا، سندووقی کاش، کۆمپانیا و شۆفێرەکان، و ڕاپۆرتە داراییەکان.
 
-  <h1>Built with AI Studio</h2>
+ئەم سیستەمە بە تەواوی ئۆفلاین (Offline Standalone) لەسەر بنکەدراوەی خێرای **SQLite** کاردەکات و پێویستی بە هیچ هێڵێکی ئینتەرنێت یان سێرڤەری دەرەکی نییە.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+---
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## 🛠️ تەکنەلۆژیا و بیناکاری (Tech Stack)
 
-</div>
+- **ڕووکاری پێشەوە (Frontend):** HTML5, CSS3 (RTL Sorani Kurdish), Vanilla JavaScript
+- **سێرڤەر و بکئەند (Backend):** Node.js, Express.js (ESM), Local JWT & Bcrypt Authentication
+- **بنکەی زانیاری (Database):** Local SQLite (`data/shop.db`) بە بەکارهێنانی `better-sqlite3` لەگەڵ WAL Mode و پاراستنی باکەپی خێرا
+- **چاپکردن (Printing):** پسووڵەی گەرمی 80mm، پسووڵەی گەورەی A4، ڕاپۆرتی بەیاناتی کۆمپانیا، شۆفێر و بارهەڵگر
+
+---
+
+## 💻 کارپێکردنی لۆکاڵی و خێرا (Quick Start)
+
+1. کلیک لەسەر فایلی `Start Sangar POS.bat` یان `Start Sangar POS.vbs` بکە.
+2. سیستەمەکە ڕاستەوخۆ لە وێبگەڕ (Browser) دەکرێتەوە لەسەر ناونیشانی `http://localhost:3000`.
+npm install
+
+# دروستکردنی فایلی .env لەسەر شێوازی .env.example
+cp .env.example .env
+
+# دەستپێکردنی سێرڤەر
+npm start
+```
+
+سێرڤەر لەسەر بەستەری `http://localhost:3000` کاردەکات.
+
+---
+
+## 🔑 هەژمارەکانی چوونەژوورەوەی بنەڕەتی
+
+- **بەڕێوەبەری سەرەکی (Admin):**
+  - ئیمەیڵ / ناوی بەکارهێنەر: `jegrsangar@gmail.com`
+  - وشەی نهێنی: `9696`
+- **کاشێر (Cashier):**
+  - ئیمەیڵ: `cashier@example.com`
+  - وشەی نهێنی: `12345678`
+
+---
+
+## 📞 زانیاری و پەیوەندی
+
+- **ناوی دوکان:** سەنگەر زمارەیی و جێگر زمارەیی
+- **ناونیشان:** هەولێر - ناوچەی پیشەسازی باکوور - شەقامی سەرەکی
+- **مۆبایلی جێگر:** 07503149696
+- **مۆبایلی سەنگەر:** 07504687412 / 07804457301
+- **دراو:** دیناری عێراقی (د.ع / IQD)

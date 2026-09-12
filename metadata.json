@@ -1,0 +1,8 @@
+{
+  "name": "Remix سەنگەر زمارەیی و جێگر زمارەیی - POS",
+  "description": "سیستەمی تەواوی کاشێر، فرۆشتن، کۆگا، قەرز، کڕین و بەڕێوەبردنی دوکانی سەنگەر زمارەیی و جێگر زمارەیی لە هەولێر",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

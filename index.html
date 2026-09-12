@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ckb" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remix سەنگەر زمارەیی و جێگر زمارەیی - POS</title>
+    <meta name="description" content="سیستەمی تەواوی کاشێر، فرۆشتن، کۆگا، قەرز، کڕین و بەڕێوەبردنی دوکانی سەنگەر زمارەیی و جێگر زمارەیی لە هەولێر" />
+    <meta property="og:title" content="Remix سەنگەر زمارەیی و جێگر زمارەیی - POS" />
+    <meta property="og:description" content="سیستەمی تەواوی کاشێر، فرۆشتن، کۆگا، قەرز، کڕین و بەڕێوەبردنی دوکانی سەنگەر زمارەیی و جێگر زمارەیی لە هەولێر" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Sidebar -->
+      <aside class="app-sidebar" id="app-sidebar">
+        <div class="sidebar-header">
+          <div class="brand-icon">🚛</div>
+          <div class="brand-info">
+            <h1>سەنگەر و جێگر</h1>
+            <p>پارچەی یەدەگی بارهەڵگر</p>
+          </div>
+        </div>
+
+        <ul class="sidebar-menu">
+          <li class="menu-item active">
+            <a href="#pos">
+              <span class="menu-icon">🛒</span>
+              <span>خاڵی فرۆشتن (POS)</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#dashboard">
+              <span class="menu-icon">📊</span>
+              <span>داشبۆردی سەرەکی</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#products">
+              <span class="menu-icon">📦</span>
+              <span>کاڵاکان و مەخزەن</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#inventory">
+              <span class="menu-icon">🔄</span>
+              <span>جووڵەی کۆگا</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#sales">
+              <span class="menu-icon">🧾</span>
+              <span>مێژووی پسووڵەکان</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#purchases">
+              <span class="menu-icon">📥</span>
+              <span>وەسڵی کڕین</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#customers">
+              <span class="menu-icon">👥</span>
+              <span>کڕیاران و قەرزەکان</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#suppliers">
+              <span class="menu-icon">🏢</span>
+              <span>دابینکەران</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#debts">
+              <span class="menu-icon">💳</span>
+              <span>ناوەندی قەرزەکان</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#expenses">
+              <span class="menu-icon">💸</span>
+              <span>تۆماری خەرجی</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="#returns">
+              <span class="menu-icon">↩️</span>
+              <span>گەڕانەوەی کاڵا</span>
+            </a>
+          </li>
+          <li class="menu-item admin-only-item">
+            <a href="#reports">
+              <span class="menu-icon">📈</span>
+              <span>ڕاپۆرتی دارایی</span>
+            </a>
+          </li>
+          <li class="menu-item admin-only-item">
+            <a href="#users">
+              <span class="menu-icon">👤</span>
+              <span>بەکارهێنەران</span>
+            </a>
+          </li>
+          <li class="menu-item admin-only-item">
+            <a href="#settings">
+              <span class="menu-icon">⚙️</span>
+              <span>ڕێکخستنەکان</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar-footer">
+          <div class="user-badge">
+            <div class="user-details">
+              <span class="user-name" id="user-display-name">بەڕێوەبەر</span>
+              <span class="user-role" id="user-display-role">Admin</span>
+            </div>
+            <button class="btn-logout-mini" id="btn-sidebar-logout" title="دەرچوون">
+              🚪 دەرچوون
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Area -->
+      <main class="app-main">
+        <!-- Top Navbar -->
+        <header class="top-navbar">
+          <div class="nav-left">
+            <button class="btn btn-secondary btn-sm" id="btn-toggle-sidebar" style="display: none;" title="مێنۆ">
+              ☰
+            </button>
+            <div class="page-title-badge">
+              <span id="page-navbar-title">خاڵی فرۆشتنی خێرا (POS)</span>
+            </div>
+          </div>
+
+          <div class="nav-right">
+            <a
+              href="https://maps.google.com/?q=Erbil+Industrial+Zone+North"
+              target="_blank"
+              class="nav-btn-maps"
+              title="شوێنی دوکان لەسەر گووگڵ ماپس"
+            >
+              📍 ناوچەی پیشەسازی هەولێر
+            </a>
+            <a href="#pos" class="btn-pos-shortcut">
+              <span>🛒</span>
+              <span>سندووقی فرۆشتن</span>
+            </a>
+          </div>
+        </header>
+
+        <!-- Dynamic Content Container -->
+        <div class="page-content" id="page-container">
+          <!-- Page loaded dynamically by JS router -->
+        </div>
+      </main>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Hidden Receipt Print Area for Thermal 80mm & A4 -->
+    <div id="printable-receipt-area"></div>
+
+    <script type="module" src="/js/app.js"></script>
+  </body>
+</html>
